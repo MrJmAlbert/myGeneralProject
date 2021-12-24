@@ -1,6 +1,6 @@
-package com.myJ.service.user.batis.service.impl;
+package com.myproject.iam.service.user.batis.service.impl;
 
-import com.myJ.service.user.batis.service.UserService;
+import com.myproject.iam.service.user.batis.service.UserService;
 import org.springframework.stereotype.Service;
 
 /**

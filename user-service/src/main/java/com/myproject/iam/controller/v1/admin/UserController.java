@@ -1,10 +1,8 @@
-package com.myJ.v1.admin.controller;
+package com.myproject.iam.controller.v1.admin;
 
-import com.myJ.service.user.batis.service.UserService;
+import com.myproject.iam.service.user.batis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
