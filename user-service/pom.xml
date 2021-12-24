@@ -17,13 +17,13 @@
             <artifactId>spring-cloud-openfeign-dependencies</artifactId>
             <version>3.0.3</version>
         </dependency>
-        
+
 
         <dependency>
-            <groupId>com.netflix.eureka</groupId>
-            <artifactId>eureka-client</artifactId>
-
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
+
     </dependencies>
 
     <properties>
