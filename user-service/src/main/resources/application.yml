@@ -1,18 +1,37 @@
 server:
-  port: 10086
+  port: 20081
 
-eureka:
-  server:
-    enable-self-preservation: false  #关闭自我保护机制
-    eviction-interval-timer-in-ms: 4000 #设置清理间隔（单位：毫秒 默认是60*1000）
-  instance:
-    hostname: localhost
+spring:
+  application:
+    name: user-service
 
-client:
-  registerWithEureka: false #不把自己作为一个客户端注册到自己身上
-  fetchRegistry: false  #不需要从服务端获取注册信息（因为在这里自己就是服务端，而且已经禁用自己注册了）
-  serviceUrl: #微服务要注册到的地址.
-    #http://localhost:3000/eureka
-    defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+    cloud:
+      nacos:
+        discovery:
+          server-addr=localhost:8848: #nacos服务中心地址
 
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/my_project_iam?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+
+#暴露全部监控端点
+management.endpoints.web.exposure.include: '*'
+
+
+# mybatis-plus配置
+mybatis-plus:
+  mapper-locations: classpath*:/com/genlian/server/service/**/mapper/xml/*.xml
+  typeEnumsPackage: com.genlian.server.enums.*
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    mapUnderscoreToCamelCase: true # 是否开启自动驼峰命名规则（camel case）映射
+    default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID # 自动分配（雪花算法）
+      db-column-underline: true #驼峰下划线转换
+      update-strategy: ignored
 
