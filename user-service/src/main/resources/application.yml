@@ -21,17 +21,17 @@ spring:
 management.endpoints.web.exposure.include: '*'
 
 
-# mybatis-plus配置
-mybatis-plus:
-  mapper-locations: classpath*:/com/genlian/server/service/**/mapper/xml/*.xml
-  typeEnumsPackage: com.genlian.server.enums.*
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-    mapUnderscoreToCamelCase: true # 是否开启自动驼峰命名规则（camel case）映射
-    default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
-  global-config:
-    db-config:
-      id-type: ASSIGN_ID # 自动分配（雪花算法）
-      db-column-underline: true #驼峰下划线转换
-      update-strategy: ignored
+## mybatis-plus配置
+#mybatis-plus:
+#  mapper-locations: classpath*:/com/genlian/server/service/**/mapper/xml/*.xml
+#  typeEnumsPackage: com.genlian.server.enums.*
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    mapUnderscoreToCamelCase: true # 是否开启自动驼峰命名规则（camel case）映射
+#    default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
+#  global-config:
+#    db-config:
+#      id-type: ASSIGN_ID # 自动分配（雪花算法）
+#      db-column-underline: true #驼峰下划线转换
+#      update-strategy: ignored
 
