@@ -20,6 +20,9 @@ spring:
 management.endpoints.web.exposure.include: '*'
 
 
+
+
+
 #    配置ribbon
 stu-provide:
   ribbon:
