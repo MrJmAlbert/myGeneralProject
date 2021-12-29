@@ -11,6 +11,8 @@
         <module>user-service</module>
         <module>order-service</module>
         <module>nacos-config-client</module>
+        <module>OrderSentinelService</module>
+        <module>order-sentinel-service</module>
     </modules>
     <packaging>pom</packaging>
     <name>my-general-platform</name>

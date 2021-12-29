@@ -7,16 +7,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="nacos-config-client" />
+        <module name="order-sentinel-service" />
         <module name="user-service" />
         <module name="order-service" />
+        <module name="nacos-config-client" />
+      </profile>
+      <profile name="Annotation profile for my-general-platform" enabled="true">
+        <sourceOutputDir name="../OrderSentinelService/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../OrderSentinelService/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="OrderSentinelService" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="OrderSentinelService" target="8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="OrderSentinelService" options="-parameters" />
       <module name="my-general-project" options="-parameters" />
       <module name="nacos-config-client" options="-parameters" />
+      <module name="order-sentinel-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>

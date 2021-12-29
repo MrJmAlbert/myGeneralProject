@@ -1,5 +1,8 @@
 server:
   port: 20082
+  tomcat:
+    threads:
+      max: 10
 
 spring:
   application:
@@ -36,3 +39,5 @@ stu-provide:
     ReadTimeout: 1000 #请求处理的超时时间
     OkToRetryOnAllOperations: true #对所有请求都进行重试
     MaxAutoRetriesNextServer: 2 #切换实例的重试次数
+
+
