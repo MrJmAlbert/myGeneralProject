@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ClientConfigController {
 
-    @Value("${payment.info : 1}")
+    @Value("${payment.info}")
     private String paymentInfo;
 
     @GetMapping("/payment/info")
