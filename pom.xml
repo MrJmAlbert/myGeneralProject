@@ -11,7 +11,7 @@
         <module>user-service</module>
         <module>order-service</module>
         <module>nacos-config-client</module>
-        <module>OrderSentinelService</module>
+<!--        <module>OrderSentinelService</module>-->
         <module>order-sentinel-service</module>
     </modules>
     <packaging>pom</packaging>
@@ -108,6 +108,7 @@
     </dependencyManagement>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>

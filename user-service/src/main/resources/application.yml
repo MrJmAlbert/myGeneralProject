@@ -1,6 +1,7 @@
 server:
   port: 20081
 
+
 spring:
   application:
     name: user-service
@@ -20,6 +21,11 @@ spring:
 #暴露全部监控端点
 management.endpoints.web.exposure.include: '*'
 
+
+# 自定义注解配置
+hello:
+  name: xiaoming
+  address: beijing
 
 ## mybatis-plus配置
 #mybatis-plus:

@@ -6,4 +6,5 @@ package com.myproject.iam.service.user.batis.service;
 public interface UserService {
 
 
+
 }

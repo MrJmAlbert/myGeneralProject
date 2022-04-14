@@ -121,7 +121,12 @@
             <optional>true</optional>
         </dependency>
 
-
+        <!--导入自定义starter-->
+        <dependency>
+            <groupId>it.cast</groupId>
+            <artifactId>hello-spring-boot-starter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
 
     </dependencies>
